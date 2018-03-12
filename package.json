@@ -1,5 +1,5 @@
 {
-  "name": "pugb-dashboard",
+  "name": "player-unknowns-dashboard",
   "version": "1.0.0",
   "description": "a dashboard of pubg data",
   "main": "index.js",
@@ -8,12 +8,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/qh08/pugb-dashboard.git"
+    "url": "git+https://github.com/qh08/player-unknowns-dashboard.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/qh08/pugb-dashboard/issues"
+    "url": "https://github.com/qh08/player-unknowns-dashboard/issues"
   },
-  "homepage": "https://github.com/qh08/pugb-dashboard#readme"
+  "homepage": "https://github.com/qh08/player-unknowns-dashboard#readme"
 }
