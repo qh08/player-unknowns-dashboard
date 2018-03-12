@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "a dashboard of pubg data",
   "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +18,9 @@
   "bugs": {
     "url": "https://github.com/qh08/player-unknowns-dashboard/issues"
   },
-  "homepage": "https://github.com/qh08/player-unknowns-dashboard#readme"
+  "homepage": "https://github.com/qh08/player-unknowns-dashboard#readme",
+  "devDependencies": {
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11"
+  }
 }
