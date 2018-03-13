@@ -1,9 +1,5 @@
-import './index.css';
-import pic from './1.jpg';
+import React from 'react';
+import ReactDom from 'react-dom';
 
-console.log(1);
-
-var img = document.createElement('img');
-img.src = pic;
-
-document.getElementById('div1').appendChild(img);
+ReactDom.render(
+    <div>Hello React!</div>, document.getElementById('app'));

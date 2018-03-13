@@ -32,6 +32,10 @@ module.exports = {
                 }
             }],
 
+        }, {
+            test: /\.js$/,
+            use: ['babel-loader?cacheDirectory=true'],
+            include: resolve('./src')
         }]
     }
 };
