@@ -1,15 +1,11 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
-const webpack = require('webpack');
-
-function resolve(file) {
-    return path.join(__dirname, '..', file);
-}
+const resolve = require('./utils').resolve;
 
 module.exports = {
-    entry: resolve('./src/index.js'),
-    devtool: 'inline-source-map',
+    entry: {
+        app: resolve('./src/index.js')
+    },
     output: {
         filename: 'bundle.js',
         path: resolve('./dist')
@@ -17,11 +13,8 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            title: 'Output Management',
             template: resolve('./index.html')
         }),
-        new webpack.NamedModulesPlugin(),
-        new webpack.HotModuleReplacementPlugin()
     ],
     module: {
         rules: [{
@@ -32,9 +25,13 @@ module.exports = {
             ]
         }, {
             test: /\.(png|svg|jpg|gif)$/,
-            use: [
-                'file-loader'
-            ]
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    limit: 8192
+                }
+            }],
+
         }]
     }
 };
