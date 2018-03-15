@@ -1,4 +1,6 @@
-.title
-{
-    color: green;
+:root {
+    --main-color: #06799F;
+    --side-one-color: #3AAACF;
+    --side-two-color: #61B4CF;
+    --reverse-color: #FF8300;
 }

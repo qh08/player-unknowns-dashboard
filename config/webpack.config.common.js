@@ -13,9 +13,14 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(['dist']),
         new HtmlWebpackPlugin({
-            template: resolve('./index.html')
+            template: resolve('./src/index.html')
         }),
     ],
+    resolve: {
+        alias: {
+            '@' : resolve('./src')
+        }
+    },
     module: {
         rules: [{
             test: /\.css$/,
