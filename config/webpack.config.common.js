@@ -8,7 +8,8 @@ module.exports = {
     },
     output: {
         filename: 'bundle.js',
-        path: resolve('./dist')
+        path: resolve('./dist'),
+        publicPath: '/'
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
