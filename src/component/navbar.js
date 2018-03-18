@@ -4,12 +4,13 @@ import {Link} from 'react-router-dom';
 import FA from 'react-fontawesome';
 
 import style from './navbar.css';
+import faStyles from 'font-awesome/css/font-awesome.css';
 
 const navbar = props => {
     return (
         <div className={style.div}>
             <div>
-            <FA name='align-justify' size='2x'/>
+            <FA name='align-justify' size='2x' cssModule={faStyles}/>
             </div>
             <ul className={style.ul}>
                 <li>
