@@ -3,9 +3,10 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const resolve = require('./utils').resolve;
 
 module.exports = {
-    entry: {
-        app: resolve('./src/index.js')
-    },
+    entry: [
+        'babel-polyfill',
+        resolve('./src/index.js'),
+    ],
     output: {
         filename: 'bundle.js',
         path: resolve('./dist'),
@@ -19,17 +20,11 @@ module.exports = {
     ],
     resolve: {
         alias: {
-            '@' : resolve('./src')
+            '@': resolve('./src')
         }
     },
     module: {
         rules: [{
-            test: /\.css$/,
-            use: [
-                'style-loader',
-                'css-loader'
-            ]
-        }, {
             test: /\.(png|svg|jpg|gif)$/,
             use: [{
                 loader: 'file-loader',
@@ -37,11 +32,20 @@ module.exports = {
                     limit: 8192
                 }
             }],
-
         }, {
             test: /\.js$/,
             use: ['babel-loader?cacheDirectory=true'],
             include: resolve('./src')
+        }, {
+            test: /.(ttf|otf|eot|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+            use: [{
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'fonts/', // where the fonts will go
+                    publicPath: '../' // override the default path
+                }
+            }]
         }]
     }
 };

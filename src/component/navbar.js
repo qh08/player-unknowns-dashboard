@@ -1,10 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom';
+import FA from 'react-fontawesome';
+
+import style from './navbar.css';
 
 const navbar = props => {
     return (
-        <div>
-            <ul>
+        <div className={style.div}>
+            <div>
+            <FA name='align-justify' size='2x'/>
+            </div>
+            <ul className={style.ul}>
                 <li>
                     <Link to="/">首页</Link>
                 </li>

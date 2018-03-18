@@ -1,16 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const home = props => {
+const welcome = props => {
     return (
         <div>
-            home
+            welcome
         </div>
     );
 };
 
-home.propTypes = {
+welcome.propTypes = {
     
 };
 
-export default home;
+export default welcome;
