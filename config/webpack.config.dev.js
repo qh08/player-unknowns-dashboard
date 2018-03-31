@@ -14,6 +14,9 @@ module.exports = merge(common, {
         rules: [{
             test: /\.css$/,
             use: ["style-loader", "css-loader?modules&localIdentName=[local]-[hash:base64:5]", "postcss-loader"]
+        }, {
+            test: /\.less$/,
+            use: ["style-loader", "css-loader?modules&localIdentName=[local]-[hash:base64:5]", "postcss-loader", "less-loader"]
         }]
     }
 });

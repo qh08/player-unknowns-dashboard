@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
 import FA from 'react-fontawesome';
 
-import style from './navbar.css';
-import faStyles from 'font-awesome/css/font-awesome.css';
+import {Row, Col} from '@/component/grid';
+import style from '@/style/navbar.less';
+import faStyles from 'font-awesome/css/font-awesome.min.css';
 
 const navbar = props => {
     return (
         <div className={style.div}>
             <div>
-            <FA name='align-justify' size='2x' cssModule={faStyles}/>
+                <FA name='align-justify' cssModule={faStyles}/>
             </div>
             <ul className={style.ul}>
                 <li>

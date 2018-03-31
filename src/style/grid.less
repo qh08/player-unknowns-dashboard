@@ -1,0 +1,59 @@
+@import './default.less';
+
+.@{prefix}-row
+{
+    position: relative;
+
+    height: auto;
+
+    .clearfix;
+}
+
+@media (min-width:@xl-screen-min)
+{
+    .get-cols(xl);
+}
+
+@media (min-width:@lg-screen-min)
+{
+    .get-cols(lg);
+}
+
+@media (min-width:@md-screen-min)
+{
+    .get-cols(md);
+}
+
+@media (min-width:@sm-screen-min)
+{
+    .get-cols(sm);
+}
+
+@media (max-width:@xs-screen-max)
+{
+    .get-cols(xs);
+}
+
+.get-cols(@type: ~'')
+{
+    .get-cols-loop(@type,@grid-columns);
+}
+
+// css comb error hint
+.get-cols-loop(@type,@index) when (@index > 0)
+{
+    .@{prefix}-col-@{type}-@{index}{
+        float: left;
+        width: percentage(@index/@grid-columns);
+    }
+
+    .get-cols-loop(@type,@index - 1)
+}
+
+.get-cols-loop(@type,@index) when (@index = 0)
+{
+    .@{prefix}-col-@{type}-@{index}{
+        width: 0;
+        display: none;
+    }
+}

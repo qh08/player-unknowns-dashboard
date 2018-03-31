@@ -27,6 +27,14 @@ module.exports = merge(common, {
                 "css-loader?modules&localIdentName=[local]-[hash:base64:5]", 
                 "postcss-loader",
             ]
+        },{
+            test: /\.less$/,
+            use: [
+                MiniCssExtractPlugin.loader,
+                "css-loader?modules&localIdentName=[local]-[hash:base64:5]",
+                "postcss-loader",
+                "less-loader", 
+            ]
         }]
     }
 });

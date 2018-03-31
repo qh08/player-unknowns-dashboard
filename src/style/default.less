@@ -1,0 +1,40 @@
+// variables
+@prefix: qh;
+
+// theme color
+@main-color: #06799f;
+@side-one-color: #3aaacf;
+@side-two-color: #61b4cf;
+@reverse-color: #ff8300;
+
+// media query size threshold
+@xl-screen-min:1200px;
+@lg-screen-min:992px;
+@md-screen-min:768px;
+@sm-screen-min:576px;
+@xs-screen-max:576px;
+
+// grid screen columns segments
+@grid-columns:24;
+
+// .clearfix
+.clearfix()
+{
+    zoom: 1;
+    &:before,
+    &:after
+    {
+        display: table;
+
+        content: ' ';
+    }
+    &:after
+    {
+        font-size: 0;
+
+        visibility: hidden;
+        clear: both;
+
+        height: 0;
+    }
+}
