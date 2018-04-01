@@ -19,10 +19,10 @@ const root = props => {
     return (
         <div>
             <Row>
-                <Col span={{xs:24,sm:24,md:6}}>
+                <Col span={{xs:24,sm:24,md:13}}>
                     <Navbar/>
                 </Col>
-                <Col>
+                <Col span={{xs:24,sm:24,md:11}}>
                     <Route path='/' component={Welcome} exact/>
                     <Route path="/about" component={About}/>
                     <Route path="/game/:id" component={Game}/>

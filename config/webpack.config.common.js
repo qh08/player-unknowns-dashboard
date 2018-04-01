@@ -3,10 +3,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const resolve = require('./utils').resolve;
 
 module.exports = {
-    entry: [
-        'babel-polyfill',
-        resolve('./src/index.js'),
-    ],
+    entry: {
+        app: [
+            'babel-polyfill',
+            resolve('./src/index.js'),
+        ]
+    },
     output: {
         filename: 'bundle.js',
         path: resolve('./dist'),

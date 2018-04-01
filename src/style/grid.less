@@ -9,19 +9,9 @@
     .clearfix;
 }
 
-@media (min-width:@xl-screen-min)
+@media (max-width:@xs-screen-max)
 {
-    .get-cols(xl);
-}
-
-@media (min-width:@lg-screen-min)
-{
-    .get-cols(lg);
-}
-
-@media (min-width:@md-screen-min)
-{
-    .get-cols(md);
+    .get-cols(xs);
 }
 
 @media (min-width:@sm-screen-min)
@@ -29,9 +19,19 @@
     .get-cols(sm);
 }
 
-@media (max-width:@xs-screen-max)
+@media (min-width:@md-screen-min)
 {
-    .get-cols(xs);
+    .get-cols(md);
+}
+
+@media (min-width:@lg-screen-min)
+{
+    .get-cols(lg);
+}
+
+@media (min-width:@xl-screen-min)
+{
+    .get-cols(xl);
 }
 
 .get-cols(@type: ~'')

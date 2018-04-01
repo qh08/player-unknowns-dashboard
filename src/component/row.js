@@ -8,7 +8,6 @@ const row = props => {
     const cols = React
         .Children
         .map(props.children, (col) => {
-            console.dir(col);
             return col;
         });
 

@@ -3,7 +3,9 @@ const common = require('./webpack.config.common.js');
 const webpack = require('webpack');
 
 module.exports = merge(common, {
-    entry: ['react-hot-loader/patch'],
+    entry: {
+        app: ['react-hot-loader/patch'],
+    },
     devtool: 'inline-source-map',
     mode: 'development',
     plugins: [
