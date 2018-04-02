@@ -1,18 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-import FA from 'react-fontawesome';
-
 import {Row, Col} from '@/component/grid';
-import style from '@/style/navbar.less';
-import faStyles from 'font-awesome/css/font-awesome.min.css';
 
-const navbar = props => {
+import style from '@/style/sidebar.less';
+
+const sidebar = props => {
     return (
-        <div className={style.div}>
-            <div>
-                <FA name='align-justify' cssModule={faStyles}/>
-            </div>
+        <div className={style.main}>
             <ul className={style.ul}>
                 <li>
                     <Link to="/">首页</Link>
@@ -28,6 +23,6 @@ const navbar = props => {
     );
 };
 
-navbar.propTypes = {};
+sidebar.propTypes = {};
 
-export default navbar;
+export default sidebar;

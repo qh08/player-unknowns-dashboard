@@ -24,7 +24,7 @@ const col = props => {
     screenTypes.forEach((type) => {
         sizeClassObj = {
             ...sizeClassObj,
-            [style[`${CONSTANT.stylePrefix}-col-${type}-${props.span[type]}`]]: props.span[type] !== undefined
+            [style[`${CONSTANT.stylePrefix}-col-${type}-${props[type]}`]]: props[type] !== undefined
         }
     });
 
@@ -38,20 +38,11 @@ const col = props => {
 };
 
 col.propTypes = {
-    span: function (props, propName, componentName) {
-
-        const span = props.span || {};
-
-        const failedValidation = Object
-            .keys(span)
-            .some((key) => {
-                return (!oneOf(key, screenTypes) || !oneOf(span[key], gridWidths));
-            });
-
-        if(failedValidation){
-            return propsValidError(propName, componentName)
-        }
-    }
+    xs:PropTypes.number,
+    sm:PropTypes.number,
+    md:PropTypes.number,
+    lg:PropTypes.number,
+    xl:PropTypes.number,
 };
 
 export default col;

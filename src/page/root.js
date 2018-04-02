@@ -4,30 +4,32 @@ import {Route} from 'react-router-dom';
 import classnames from 'classnames';
 
 import {Row, Col} from '@/component/grid';
-import Navbar from '@/component/navbar';
+import Headbar from '@/component/headbar';
+import Sidebar from '@/component/sidebar';
 import Welcome from '@/page/welcome';
 import About from '@/page/about';
 import Game from '@/page/game';
 
 import style from '@/style/root.less';
 
-const sidebarStyle = classnames({'qh-col-md-6': true});
-
-const mainContentStyle = classnames({'qh-col-md-18': true});
-
 const root = props => {
     return (
-        <div>
-            <Row>
-                <Col span={{xs:24,sm:24,md:13}}>
-                    <Navbar/>
-                </Col>
-                <Col span={{xs:24,sm:24,md:11}}>
-                    <Route path='/' component={Welcome} exact/>
-                    <Route path="/about" component={About}/>
-                    <Route path="/game/:id" component={Game}/>
-                </Col>
-            </Row>
+        <div className={style.main}>
+            <div className={style.headbar}>
+                <Headbar/>
+            </div>
+            <div className={style.sidebar}>
+                <Sidebar/>
+            </div>
+            <div className={style.content}>
+                <Row>
+                    <Col xs={24} sm={24} md={18}>
+                        <Route path='/' component={Welcome} exact/>
+                        <Route path="/about" component={About}/>
+                        <Route path="/game/:id" component={Game}/>
+                    </Col>
+                </Row>
+            </div>
         </div>
     );
 };
