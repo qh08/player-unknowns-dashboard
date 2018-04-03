@@ -1,13 +1,12 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
-import {Row, Col} from '@/component/grid';
 
 import style from '@/style/sidebar.less';
 
 const sidebar = props => {
     return (
-        <div className={style.main}>
+        <div className={style.sidebar}>
             <ul className={style.ul}>
                 <li>
                     <Link to="/">首页</Link>
