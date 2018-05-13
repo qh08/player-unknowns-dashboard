@@ -10,10 +10,13 @@ const sidebar = props => {
             <div className={style.logo}>logo</div>
             <ul className={style.ul}>
                 <li>
-                    <Link to="/dashboard/basic">基本数据</Link>
+                    <Link to="/dashboard/basic">基础数据</Link>
                 </li>
                 <li>
                     <Link to="/dashboard/advanced">高阶数据</Link>
+                </li>
+                <li>
+                    <Link to="/dashboard/user">用户管理</Link>
                 </li>
             </ul>
         </div>

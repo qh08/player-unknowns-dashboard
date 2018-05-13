@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const dashboardBasic = props => {
     return (
         <div>
-            b
+            <h1>基础数据</h1>
         </div>
     );
 };
