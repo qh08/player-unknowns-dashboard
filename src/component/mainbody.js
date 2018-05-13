@@ -1,12 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 
 import {Row, Col} from '@/component/grid';
 import Header from '@/component/header';
 import Welcome from '@/page/welcome';
 import About from '@/page/about';
-import Game from '@/page/game';
+import DashboardBasic from '@/page/dashboardBasic';
+import DashboardAdvanced from '@/page/dashboardAdvanced';
 
 import style from '@/style/mainbody.less';
 
@@ -21,11 +22,8 @@ const mainbody = props => {
 
             <Row>
                 <Col xs={24} sm={24} md={24}>
-                    <Router>
-                        <Switch>
-                            <Route path="/dashboard/game/:id" component={Game}/>
-                        </Switch>
-                    </Router>
+                    <Route path="/dashboard/basic" component={DashboardBasic}/>
+                    <Route path="/dashboard/advanced" component={DashboardAdvanced}/>
                 </Col>
             </Row>
         </div>
