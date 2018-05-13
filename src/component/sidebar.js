@@ -9,13 +9,7 @@ const sidebar = props => {
         <div className={style.sidebar}>
             <ul className={style.ul}>
                 <li>
-                    <Link to="/">首页</Link>
-                </li>
-                <li>
-                    <Link to="/about">关于</Link>
-                </li>
-                <li>
-                    <Link to="/game/1">游戏</Link>
+                    <Link to="/dashboard/game/1">游戏</Link>
                 </li>
             </ul>
         </div>

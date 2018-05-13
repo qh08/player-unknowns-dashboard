@@ -44,8 +44,8 @@ module.exports = {
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]',
-                    outputPath: './fonts/', // where the fonts will go
-                    publicPath: './fonts/' // override the default path
+                    outputPath: '/fonts/', // where the fonts will go
+                    publicPath: '/fonts/' // override the default path
                 }
             }]
         }]

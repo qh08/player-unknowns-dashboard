@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import Icon from '@/component/iconfont';
+import Icon from '@/component/icon';
 
-import style from '@/style/headbar.less';
+import style from '@/style/header.less';
 
-const headbar = props => {
+const header = props => {
     return (
-        <div className={style.headbar}>
+        <div className={style.main}>
             <Icon className={style.logo} name='align-justify' size='2x'/>
             header
         </div>
     );
 };
 
-headbar.propTypes = {};
+header.propTypes = {};
 
-export default headbar;
+export default header;
